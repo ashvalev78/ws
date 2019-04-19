@@ -704,14 +704,14 @@
             <label for="" class="popup__input input">
               <div class="input__text">ФИО</div>
               <div class="input__wrap">
-                <input type="text" class="input__input required">
+                <input type="text" class="input__input required" id="fio">
                 <img src="images/content/error.svg" alt="" class="input__error fade hidden">
               </div>
             </label>
             <label for="" class="popup__input input">
               <div class="input__text">Компания</div>
               <div class="input__wrap">
-                <input type="text" class="input__input required">
+                <input type="text" class="input__input required" id="company">
                 <img src="images/content/error.svg" alt="" class="input__error fade hidden">
               </div>
             </label>
@@ -720,14 +720,14 @@
             <label for="" class="popup__input input">
               <div class="input__text">Телефон для связи</div>
               <div class="input__wrap">
-                <input type="text" class="input__input required">
+                <input type="text" class="input__input required" id="phone">
                 <img src="images/content/error.svg" alt="" class="input__error fade hidden">
               </div>
             </label>
             <label for="" class="popup__input input">
               <div class="input__text">E-mail</div>
               <div class="input__wrap">
-                <input type="text" class="input__input required">
+                <input type="text" class="input__input required" id="email">
                 <img src="images/content/error.svg" alt="" class="input__error fade hidden">
               </div>
             </label>
@@ -736,8 +736,8 @@
             <label for="" class="popup__input input">
               <div class="input__text">Сообщение</div>
               <div class="input__wrap">
-                <textarea placeholder="Получить предложение" type="text"
-                  class="input__input input__input--area"></textarea>
+                <textarea placeholder="Получить предложение" type="text" class="input__input input__input--area"
+                  id="message"></textarea>
               </div>
             </label>
           </div>
@@ -746,7 +746,7 @@
       </div>
     </div>
   </form>
-  <div class="popup popup--contact">
+  <div class="popup popup--contact" id="failPopup">
     <div class="popup__content">
       <div class="popup__panel">
         <a href="#" class="popup__trigger">
@@ -759,7 +759,7 @@
       </div>
     </div>
   </div>
-  <div class="popup popup--contact">
+  <div class="popup popup--contact" id="successPopup">
     <div class="popup__content">
       <div class="popup__panel">
         <a href="#" class="popup__trigger">

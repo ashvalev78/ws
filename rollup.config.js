@@ -1,6 +1,6 @@
 const typescript = require('rollup-plugin-typescript2');
 const babel = require('rollup-plugin-babel');
-// const commonJs = require('rollup-plugin-commonjs');
+const commonJs = require('rollup-plugin-commonjs');
 const sourceMaps  =  require('rollup-plugin-sourcemaps');
 const resolveNodeModules = require('rollup-plugin-node-resolve');
 const uglify = require('rollup-plugin-uglify-es');
@@ -16,7 +16,7 @@ const rollupConfig = {
       tsconfig: "tsconfig.json",
     }),
     resolveNodeModules(),
-    //commonJs(),
+    commonJs(),
     babel({
       exclude: 'node_modules/**',
     }),
