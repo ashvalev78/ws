@@ -27,12 +27,27 @@
     padding: 12px 20px;
     font-size: 26px;
     color: $text-main;
-    font-family: PlumbCondensed;
+    font-family: 'PlumbCondensed';
+
+    @include laptops-small {
+      width: 405px;
+    }
+
+    @include phones {
+      padding: 5px 15px;
+      width: 100%;
+      font-size: 14px;
+    }
 
     &--area {
       resize: none;
       padding: 20px;
       min-height: 250px;
+
+      @include phones {
+        min-height: 80px;
+        border-radius: 15px;
+      }
     }
   }
 }

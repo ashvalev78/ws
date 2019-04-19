@@ -5,6 +5,10 @@
 
     &:not(:last-child) {
       margin-bottom: 30px;
+
+      @include phones {
+        margin-bottom: 15px;
+      }
     }
   }
 

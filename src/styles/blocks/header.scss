@@ -15,6 +15,7 @@
     align-items: center;
 
     position: relative;
+
     &:after {
       content: "";
       background-color: $bg-block;

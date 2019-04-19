@@ -7,6 +7,12 @@
   &__badge {
     display: flex;
     margin-bottom: 60px;
+
+    &-img {
+      @include laptops-small {
+        display: none;
+      }
+    }
   }
 
   &__row-info {
@@ -19,6 +25,7 @@
 
     &:not(:last-child) {
       margin-bottom: 100px;
+
       @include laptops-small {
         margin-bottom: 10px;
       }
@@ -44,8 +51,28 @@
   }
 
   &__img {
+    @include desktop-large {
+      width: 475px;
+    }
+
+    @include desktop {
+      width: 400px;
+    }
+
     @include laptops-middle {
-      width: 330px;
+      width: 325px;
+    }
+
+    @include laptops-small {
+      width: 350px;
+    }
+
+    @include tablets {
+      width: 350px;
+    }
+
+    @include phones {
+      width: 260px;
     }
   }
 

@@ -5,14 +5,14 @@
   padding: 35px;
   color: #fff;
 
-  font-family: PlumbCondensed;
+  font-family: 'PlumbCondensed';
   font-size: 36px;
   line-height: normal;
   letter-spacing: 0.02em;
   font-weight: 600;
   text-align: center;
 
-  @include laptops-small {
+  @include tablets {
     font-size: 30px;
   }
 
@@ -21,8 +21,13 @@
     padding-right: 0;
     text-align: right;
     position: relative;
+
+    @include phones {
+      display: none;
+    }
+
     &:after {
-       content: "";
+      content: "";
       background-color: $focus-title-bg;
 
       position: absolute;
@@ -31,12 +36,26 @@
       bottom: 0;
       width: 2000px;
       height: 100%;
+
+      @include phones {
+        display: none;
+      }
     }
   }
 
   &--client {
     width: 100%;
     border-radius: 0;
+
+    @include tablets {
+      font-size: 20px;
+    }
+
+    @include phones {
+      font-size: 16px;
+      padding-top: 15px;
+      padding-bottom: 15px;
+    }
   }
 
 

@@ -2,12 +2,16 @@
 
   display: flex;
   flex-direction: column;
-    width: 330px;
+  width: 330px;
 
 
   padding: 85px 30px 45px;
   background-color: $bg-block;
   border-radius: 30px;
+
+  @include phones {
+    width: 270px;
+  }
 
   &__trigger {
     position: absolute;

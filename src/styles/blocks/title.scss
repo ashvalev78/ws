@@ -6,7 +6,7 @@
   }
 
   &__main {
-    font-family: PlumbCondensed;
+    font-family: 'PlumbCondensed';
     font-size: 36px;
     line-height: normal;
     letter-spacing: 0.03em;
@@ -14,19 +14,28 @@
 
     margin-bottom: 35px;
 
+    @include phones {
+      font-size: 24px;
+    }
+
     &--mark {
       max-width: 380px;
     }
   }
 
   &__sub {
-    font-family: PlumbCondensed;
+    font-family: 'PlumbCondensed';
     font-size: 24px;
     line-height: normal;
     color: $text-subtitle;
     margin-bottom: 60px;
+
     @include laptops-small {
       margin-bottom: 30px;
+    }
+
+    @include phones {
+      font-size: 16px;
     }
   }
 }

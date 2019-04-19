@@ -22,7 +22,7 @@
     }
   }
 
-  
+
   &__top-part {
     display: flex;
     justify-content: space-between;
@@ -30,19 +30,25 @@
     background-color: $bg-color;
     padding: 75px 65px 75px 0;
     position: relative;
+    border: solid $orange 1px;
+    border-left: none;
+    height: 365px;
 
-    
 
     @include tablets {
       flex-direction: column;
       justify-content: center;
       align-items: center;
       padding-right: 0;
+      height: 650px;
+      border-left: solid $orange 1px;
+      border-right: none;
     }
 
     @include phones {
       padding-bottom: 45px;
       padding-top: 100px;
+
     }
 
     &:before {
@@ -53,6 +59,12 @@
       bottom: 0;
       right: 100%;
       width: 999px;
+      border: solid $orange 1px;
+      border-left: none;
+      border-right: none;
+      height: 100%;
+      height: 365px;
+      top: -1px;
 
       @include laptops-small {
         width: 8.8%;
@@ -61,6 +73,7 @@
       @include tablets {
         left: 100%;
         right: auto;
+        height: 650px;
       }
     }
   }
@@ -84,6 +97,10 @@
 
     @include tablets {
       width: 215px;
+    }
+
+    @include laptops-small {
+      margin-bottom: 40px;
     }
 
     &:first-child {
@@ -116,6 +133,7 @@
       flex: 1;
       display: flex;
       align-items: flex-end;
+
       @include tablets {
         order: 0;
         margin-bottom: 60px;
@@ -131,12 +149,13 @@
       flex-direction: column;
       justify-content: flex-end;
       align-items: flex-end;
+
       @include tablets {
         order: 2;
         align-items: flex-start;
       }
 
-      
+
     }
 
     &--email {
@@ -149,6 +168,7 @@
   &__contacts {
     display: flex;
     justify-content: flex-end;
+
     @include tablets {
       justify-content: flex-start;
     }
@@ -156,9 +176,11 @@
     &--tel {
       transform: translateX(-15px);
       margin-bottom: 20px;
+
       @include tablets {
         transform: translateX(0);
       }
+
       &:first-child {
         @include tablets {
           transform: translateX(30px);
@@ -170,7 +192,7 @@
       @include tablets {
         transform: translateX(30px);
       }
-      
+
     }
   }
 
@@ -179,7 +201,8 @@
       margin-bottom: 10px;
     }
 
-    &--politics, &--services {
+    &--politics,
+    &--services {
       display: flex;
       align-items: center;
 
@@ -195,6 +218,7 @@
 
   &__icon {
     margin-right: 8px;
+
     @include phones {
       width: 22px;
       height: 22px;
@@ -212,7 +236,7 @@
     display: flex;
     justify-content: space-between;
     padding: 38px 0;
-    
+
     @include phones {
       padding: 17px 0 50px;
     }
@@ -236,11 +260,12 @@
       top: -75%;
       left: 50%;
       transform: translateX(-50%);
+      color: $text-color;
     }
 
     @include phones {
       bottom: 113px;
-      font-size: 14px;
+      font-size: 16px;
       display: flex;
       width: 100%;
       justify-content: center;

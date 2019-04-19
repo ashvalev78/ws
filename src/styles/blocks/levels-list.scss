@@ -6,12 +6,29 @@
     margin: 0 -15px;
   }
 
+  @include laptops-small {
+    padding-left: 50px;
+  }
+
+  @include phones {
+    padding-left: 10px;
+  }
+
   &__item {
     width: 33.33%;
     padding: 0 40px;
 
     @include laptops-large {
       padding: 0 15px;
+    }
+
+    @include laptops-small {
+      width: 300px;
+      margin-right: 25px;
+    }
+
+    @include phones {
+      margin-right: 0;
     }
   }
 }

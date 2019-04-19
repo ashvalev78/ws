@@ -1,9 +1,13 @@
 .levels {
-  
+
   &__container {
     display: flex;
     flex-direction: column;
     padding-bottom: 60px;
+
+    @include laptops-small {
+      width: 100%;
+    }
   }
 
   &__title {
@@ -19,6 +23,7 @@
     @include laptops-small {
       margin-bottom: 50px;
     }
+
   }
 
   &__img {
@@ -26,10 +31,33 @@
       height: 668px;
       width: 1080px;
     }
+
     @include laptops-small {
       width: 800px;
       height: 490px;
     }
+
+    @include phones {
+      width: 90%;
+      height: 225px;
+    }
+
+    @include phones-small {
+      height: 200px;
+    }
   }
-  
+
+  &__list {
+    @include laptops-small {
+      overflow: hidden;
+      overflow-x: auto;
+      height: 550px;
+      display: flex;
+      align-items: center;
+    }
+
+    @include phones {
+      height: 500px;
+    }
+  }
 }

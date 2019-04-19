@@ -1,5 +1,19 @@
 .client-list {
+  @include laptops-small {
+    display: flex;
+    padding-left: 50px;
+  }
+
+  @include phones {
+    padding-left: 10px;
+  }
+
   &__item {
+
+    @include laptops-small {
+      margin-left: 70px;
+    }
+
     &:not(:last-child) {
       margin-bottom: 40px;
     }

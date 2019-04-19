@@ -1,6 +1,12 @@
 .special {
-  
+
   padding-bottom: 120px;
+
+  &__container {
+    @include phones-small {
+      width: 92%;
+    }
+  }
 
   &__box {
     border: 2px solid #2D29A7;
@@ -34,6 +40,7 @@
     @include laptops-large {
       margin-right: 65px;
     }
+
     @include laptops-small {
       margin-right: 0;
       display: flex;

@@ -1,0 +1,122 @@
+.thanks {
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+
+    padding-right: 6.5%;
+
+    @include tablets {
+        padding-left: 6.5%;
+    }
+
+    @include desktop-large {
+        padding-bottom: 180px;
+    }
+
+    @include desktop {
+        padding-bottom: 150px;
+    }
+
+    @include laptops-middle {
+        padding-bottom: 90px;
+    }
+
+    @include tablets {
+        padding-bottom: 50px;
+    }
+
+    @include phones {
+        padding-bottom: 30px;
+    }
+
+    &__wrapper {
+        overflow: hidden;
+        overflow-x: auto;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+
+        @include tablets {
+            display: block;
+            padding-left: 5%;
+        }
+    }
+
+    &__diplomas {
+        display: flex;
+
+        &-item {
+            margin-right: 150px;
+
+
+            @include desktop {
+                margin-right: 140px;
+            }
+
+            @include laptops-middle {
+                margin-right: 85px;
+            }
+
+            @include tablets {
+                margin-right: 50px;
+            }
+
+            @include phones {
+                margin-right: 18px;
+            }
+
+            &:last-child {
+                margin-right: 0;
+            }
+        }
+    }
+
+    &__diploma {
+        height: 1100px;
+
+        @include desktop {
+            height: 900px;
+        }
+
+        @include laptops-middle {
+            height: 715px;
+        }
+
+        @include laptops-small {
+            height: 630px;
+        }
+
+        @include tablets {
+            height: 650px;
+        }
+
+        @include phones {
+            height: 300px;
+        }
+    }
+
+    &__header {
+        font-size: 28px;
+        color: $highlighted;
+        margin-bottom: 140px;
+
+        @include desktop {
+            margin-bottom: 80px;
+        }
+
+        @include laptops-small {
+            margin-bottom: 75px;
+            font-size: 24px;
+        }
+
+        @include tablets {
+            margin-bottom: 50px;
+            font-size: 20px;
+        }
+
+        @include phones {
+            margin-bottom: 40px;
+            font-size: 16px;
+        }
+    }
+}

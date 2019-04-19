@@ -4,6 +4,7 @@
   &__container {
     padding-top: 60px;
     display: flex;
+    flex-flow: column;
 
     &--vis {
       padding-top: 90px;
@@ -14,6 +15,15 @@
         padding-top: 50px;
       }
     }
+
+    @include tablets {
+      align-items: center;
+    }
+
+    @include phones {
+      padding-top: 0;
+      flex-flow: column;
+    }
   }
 
   &__title {
@@ -23,6 +33,16 @@
   &__info {
     flex: 1;
     max-width: 600px;
+
+    @include laptops-small {
+      flex: none;
+      width: 415px;
+    }
+
+    @include tablets {
+      max-width: 415px;
+      width: 90%;
+    }
   }
 
   &__img-wrap {
@@ -30,12 +50,20 @@
     display: flex;
     justify-content: flex-end;
     align-items: center;
+
+    @include tablets {
+      display: none;
+    }
   }
 
   &__img {
-    
+
     @include laptops-large {
       width: 310px;
+    }
+
+    @include tablets {
+      display: none;
     }
 
     &--abs {
@@ -47,6 +75,32 @@
         width: 900px;
         right: -175px;
       }
+
+      @include laptops-small {
+        width: 760px;
+        right: -250px;
+        top: 170px;
+      }
+    }
+  }
+
+  &__mobile-img {
+    display: none;
+
+    @include tablets {
+      display: flex;
+    }
+
+    @include phones {
+      width: 95%;
+    }
+  }
+
+  &-top {
+    flex-flow: row !important;
+
+    @include tablets {
+      justify-content: center !important;
     }
   }
 }

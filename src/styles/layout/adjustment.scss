@@ -10,10 +10,17 @@ body {
 
 .container {
   width: 80%;
-  max-width: 1380px;
+
+  @include desktop-large {
+    width: 70%;
+  }
 
   @include laptops-small {
     width: 85%;
+  }
+
+  @include phones {
+    width: 95%;
   }
 }
 
@@ -55,14 +62,14 @@ body {
 
 
 .animated-button {
-    cursor: pointer;
-    transition: all .2s ease-in-out;
+  cursor: pointer;
+  transition: all .2s ease-in-out;
 }
 
 .black-animated {
-    transition: all .2s ease-in-out;
+  transition: all .2s ease-in-out;
 }
 
 .animated-scale {
-    transition: all .2s ease-in-out;
+  transition: all .2s ease-in-out;
 }

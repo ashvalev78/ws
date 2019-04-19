@@ -5,39 +5,93 @@
   &__title {
     display: flex;
     justify-content: center;
+
+    .marketing__container {
+      position: initial;
+    }
   }
 
   &__container {
     z-index: 20;
+    position: absolute;
+    left: 10%;
+
+    @include phones {
+      position: relative;
+    }
   }
 
   &__intro {
     display: flex;
+    flex-flow: column;
     justify-content: center;
-    background-image: url('../images/content/marketing.jpg');
-    background-size: cover;
     padding: 90px 0;
     position: relative;
 
-    &:after {
-      content: '';
-      position: absolute;
-      top: 0;
-      left: 0;
-      right: 0;
-      bottom: 0;
-      height: 100%;
-      width: 100%;
-      background: linear-gradient(90deg, rgba(20, 20, 28, 0.8) 21.56%, rgba(20, 20, 28, 0) 92.34%);
-      z-index: 10;
-    }
-
     @include laptops-small {
       padding: 70px 0;
+    }
+
+    @include phones {
+      padding: 0;
+    }
+
+    &-img {
+      width: 100%;
+
+      @include laptops-small {
+        height: 380px;
+      }
+
+      @include tablets {
+        height: 340px;
+      }
+
+      @include phones {
+        height: 120px;
+      }
+
+      &-wrapper {
+        position: relative;
+
+        &:after {
+          content: '';
+          position: absolute;
+          top: 0;
+          left: 0;
+          right: 0;
+          bottom: 0;
+          height: 99%;
+          width: 100%;
+          background: linear-gradient(90deg, rgba(20, 20, 28, 0.8) 21.56%, rgba(20, 20, 28, 0) 92.34%);
+          z-index: 10;
+
+          @include tablets {
+            height: 98%;
+          }
+
+          @include phones {
+            display: none;
+          }
+        }
+      }
     }
   }
 
   &__text {
     max-width: 580px;
+
+    @include laptops-small {
+      width: 420px;
+    }
+
+    @include tablets {
+      max-width: 420px;
+      width: 90%;
+    }
+
+    @include phones {
+      color: black !important;
+    }
   }
 }

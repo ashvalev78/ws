@@ -3,7 +3,7 @@
 
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
   <meta http-equiv="X-UA-Compatible" content="ie=edge" />
   <link rel="stylesheet" href="styles/main.css">
   <title>Webiray Sport</title>
@@ -65,28 +65,28 @@
             <ul class="dropdown__socials socials">
               <li class="socials__item">
                 <a href="https://vk.com/webiraylab" class="socials__link">
-                  <svg class="socials__icon socials__icon--big">
+                  <svg class="socials__icon socials__icon--big header-social">
                     <use xlink:href="images/sprite.svg#vk"></use>
                   </svg>
                 </a>
               </li>
               <li class="socials__item">
                 <a href="https://www.facebook.com/webiraylab/" class="socials__link">
-                  <svg class="socials__icon socials__icon--big">
+                  <svg class="socials__icon socials__icon--big header-social">
                     <use xlink:href="images/sprite.svg#fb"></use>
                   </svg>
                 </a>
               </li>
               <li class="socials__item">
                 <a href="https://www.instagram.com/webiraylab/" class="socials__link">
-                  <svg class="socials__icon socials__icon--big">
+                  <svg class="socials__icon socials__icon--big header-social">
                     <use xlink:href="images/sprite.svg#inst"></use>
                   </svg>
                 </a>
               </li>
               <li class="socials__item">
                 <a href="https://www.youtube.com/channel/UCRLdjo_FJfBD2M_5rTybkrw" class="socials__link">
-                  <svg class="socials__icon socials__icon--big">
+                  <svg class="socials__icon socials__icon--big header-social">
                     <use xlink:href="images/sprite.svg#yt"></use>
                   </svg>
                 </a>
@@ -97,9 +97,12 @@
       </div>
     </div>
     <section class="section section--intro intro">
+      <div class="intro__mobile">
+        Ваш бизнес может работать лучше!
+      </div>
       <div class="intro__container container">
         <div class="intro__terminal">
-          <img src="images/content/terminal.svg" alt="" class="intro__terminal-img">
+          <img src="images/content/terminal.png" alt="" class="intro__terminal-img">
         </div>
         <div class="intro__descr">
           <div class="intro__about">
@@ -134,7 +137,7 @@
             </div>
           </div>
           <div class="auto__info-img">
-            <img src="images/content/auto.svg" alt="" class="auto__img">
+            <img src="images/content/auto.png" alt="" class="auto__img">
           </div>
         </div>
         <div class="auto__row-info auto__row-info--center">
@@ -187,7 +190,7 @@
         <div class="pluses__title text-title">Наши преимущества</div>
         <div class="pluses__content">
           <div class="pluses__col mobile-hidden">
-            <img src="images/content/pluses.svg" alt="" class="pluses__img">
+            <img src="images/content/pluses.png" alt="" class="pluses__img">
           </div>
           <div class="pluses__col">
             <div class="pluses__info">
@@ -322,7 +325,7 @@
       </div>
     </section>
     <section class="section section--stat stat">
-      <div class="stat__container container">
+      <div class="stat__container container stat-top">
         <div class="stat__info">
           <div class="stat__title title title--left">
             <div class="title__main">Статистика</div>
@@ -337,7 +340,7 @@
           </div>
         </div>
         <div class="stat__img-wrap">
-          <img src="images/content/stat.svg" alt="" class="stat__img">
+          <img src="images/content/stat.png" alt="" class="stat__img">
         </div>
       </div>
     </section>
@@ -376,9 +379,9 @@
         </div>
         <div class="stat__img-wrap">
         </div>
+        <img src="./images/content/stat-combined-mobile.png" alt="" class="stat__mobile-img">
       </div>
       <img src="images/content/visits.png" alt="" class="stat__img stat__img--abs">
-
     </section>
     <section class="section section--marketing marketing">
       <div class="marketing__title">
@@ -387,6 +390,9 @@
         </div>
       </div>
       <div class="marketing__intro">
+        <div class="marketing__intro-img-wrapper">
+          <img src="./images/content/marketing.png" alt="" class="marketing__intro-img">
+        </div>
         <div class="marketing__container container">
           <div class="marketing__text text text--marketing">
             <p>Опция Личный кабинет позволяет собрать данные по ЦА, временным параметрам, востребованности и окупаемости
@@ -405,76 +411,81 @@
       <div class="client__container container">
         <div class="client__text-title text-title">Работа WebirayLab</div>
         <div class="client__text-subtitle highlighted">Что получает наш клиент?</div>
-        <ul class="client-list">
-          <li class="client-list__item">
-            <div class="client-plus">
-              <div class="client-plus__col client-plus__col--left">
-                <img src="images/content/01.svg" class="client-plus__icon">
-                <div class="client-plus__text text text--dark">Возможность четкого ведения учета - от фиксации денег на
-                  балансе до эффективного учёта инвентаря.</div>
-              </div>
-              <div class="client-plus__col client-plus__col--right">
-                <img src="images/content/item-light.svg" class="client-plus__icon">
-                <div class="client-plus__text text text--dark">Учет становится максимально прозрачным, а сам функционал
-                  - широким.</div>
-              </div>
-            </div>
-          </li>
-          <li class="client-list__item">
-            <div class="client-plus">
-              <div class="client-plus__col client-plus__col--left">
-                <img src="images/content/02.svg" class="client-plus__icon">
-                <div class="client-plus__text text text--dark">Календарь записи, который позволяет контролировать их
-                  учет, а также облегчает сам процесс для непосредственных клиентов
-                  клуба и центра. В частности, им достаточно установить приложение на смартфон и пользоваться без лишних
-                  звонков или
-                  визитов. Все в режиме онлайн!</div>
-              </div>
-              <div class="client-plus__col client-plus__col--right">
-                <img src="images/content/item-light.svg" class="client-plus__icon">
-                <div class="client-plus__text text text--dark">Уменьшение расходов на оплату персонала, а это
-                  дополнительная экономия бюджета.</div>
-              </div>
-            </div>
-          </li>
-          <li class="client-list__item">
-            <div class="client-plus">
-              <div class="client-plus__col client-plus__col--left">
-                <img src="images/content/03.svg" class="client-plus__icon">
-                <div class="client-plus__text text text--dark">Ознакомление клиентов центра и клуба со всеми услугами
-                  благодаря напоминаниям и автоматизированным сообщениям.</div>
-              </div>
-              <div class="client-plus__col client-plus__col--right">
-                <img src="images/content/item-light.svg" class="client-plus__icon">
-                <div class="client-plus__text text text--dark">Об ошибках из-за «человеческого фактора» можно забыть.
+        <div class="client__wrapper">
+          <ul class="client-list">
+            <li class="client-list__item">
+              <div class="client-plus">
+                <div class="client-plus__col client-plus__col--left">
+                  <img src="images/content/01.svg" class="client-plus__icon client-plus__number">
+                  <div class="client-plus__text text text--dark">Возможность четкого ведения учета - от фиксации денег
+                    на
+                    балансе до эффективного учёта инвентаря.</div>
+                </div>
+                <div class="client-plus__col client-plus__col--right">
+                  <img src="images/content/item-light.svg" class="client-plus__icon">
+                  <div class="client-plus__text text text--dark">Учет становится максимально прозрачным, а сам
+                    функционал
+                    - широким.</div>
                 </div>
               </div>
-            </div>
-          </li>
-          <li class="client-list__item">
-            <div class="client-plus">
-              <div class="client-plus__col client-plus__col--left">
-                <img src="images/content/04.svg" class="client-plus__icon">
-                <div class="client-plus__text text text--dark">Возможность забыть о проблемах в сфере оплаты. Теперь
-                  клиенты центра и клуба без колебаний оплачивают выбранные услуги
-                  банковскими картами через Личный кабинет или мобильное приложение. Да, мы знаем, что большой процент
-                  целевой аудитории
-                  клиента до сих пор не любит смартфоны. Для них была организована возможность оплачивать услуги через
-                  терминалы
-                  самообслуживания. Все ради удобства!</div>
+            </li>
+            <li class="client-list__item">
+              <div class="client-plus">
+                <div class="client-plus__col client-plus__col--left">
+                  <img src="images/content/02.svg" class="client-plus__icon client-plus__number">
+                  <div class="client-plus__text text text--dark">Календарь записи, который позволяет контролировать их
+                    учет, а также облегчает сам процесс для непосредственных клиентов
+                    клуба и центра. В частности, им достаточно установить приложение на смартфон и пользоваться без
+                    лишних
+                    звонков или
+                    визитов. Все в режиме онлайн!</div>
+                </div>
+                <div class="client-plus__col client-plus__col--right">
+                  <img src="images/content/item-light.svg" class="client-plus__icon">
+                  <div class="client-plus__text text text--dark">Уменьшение расходов на оплату персонала, а это
+                    дополнительная экономия бюджета.</div>
+                </div>
               </div>
-              <div class="client-plus__col client-plus__col--right">
-                <img src="images/content/item-light.svg" class="client-plus__icon">
-                <div class="client-plus__text text text--dark">Финансовый контроль достигает высокого уровня - система
-                  автоматизации не позволяет потерять из виду даже один рубль.</div>
+            </li>
+            <li class="client-list__item">
+              <div class="client-plus">
+                <div class="client-plus__col client-plus__col--left">
+                  <img src="images/content/03.svg" class="client-plus__icon client-plus__number">
+                  <div class="client-plus__text text text--dark">Ознакомление клиентов центра и клуба со всеми услугами
+                    благодаря напоминаниям и автоматизированным сообщениям.</div>
+                </div>
+                <div class="client-plus__col client-plus__col--right">
+                  <img src="images/content/item-light.svg" class="client-plus__icon">
+                  <div class="client-plus__text text text--dark">Об ошибках из-за «человеческого фактора» можно забыть.
+                  </div>
+                </div>
               </div>
-            </div>
-          </li>
-        </ul>
+            </li>
+            <li class="client-list__item">
+              <div class="client-plus">
+                <div class="client-plus__col client-plus__col--left">
+                  <img src="images/content/04.svg" class="client-plus__icon client-plus__number">
+                  <div class="client-plus__text text text--dark">Возможность забыть о проблемах в сфере оплаты. Теперь
+                    клиенты центра и клуба без колебаний оплачивают выбранные услуги
+                    банковскими картами через Личный кабинет или мобильное приложение. Да, мы знаем, что большой процент
+                    целевой аудитории
+                    клиента до сих пор не любит смартфоны. Для них была организована возможность оплачивать услуги через
+                    терминалы
+                    самообслуживания. Все ради удобства!</div>
+                </div>
+                <div class="client-plus__col client-plus__col--right">
+                  <img src="images/content/item-light.svg" class="client-plus__icon">
+                  <div class="client-plus__text text text--dark">Финансовый контроль достигает высокого уровня - система
+                    автоматизации не позволяет потерять из виду даже один рубль.</div>
+                </div>
+              </div>
+            </li>
+          </ul>
+        </div>
       </div>
     </section>
+    <a name="2"></a>
     <section class="section section--become-client become-client">
-      <a name="2"></a>
       <div class="become-client__focus-title focus-title focus-title--client">
         Станьте клиентом WebirayLab и автоматизируйте свои бизнес-процессы!
       </div>
@@ -503,6 +514,19 @@
         </div>
       </div>
     </section>
+    <section class="section section--thanks thanks">
+      <h3 class="thanks__header">Благодарственные письма и отзывы</h3>
+      <div class="thanks__wrapper">
+        <ul class="thanks__diplomas">
+          <li class="thanks__diplomas-item">
+            <img src="./images/content/dinamo-diplo.png" alt="" class="thanks__diploma">
+          </li>
+          <li class="thanks__diplomas-item">
+            <img src="./images/content/rs-diplo.png" alt="" class="thanks__diploma">
+          </li>
+        </ul>
+      </div>
+    </section>
     <footer class="footer">
       <a name="3"></a>
       <div class="container footer__container">
@@ -520,7 +544,7 @@
           </div>
           <div class="footer__col footer__col--center">
             <div class="footer__row">
-              <a href="#" class="highlighted-orange">Политика
+              <a href="#" class="highlighted-orange" id="politics">Политика
                 конфиденциальности</a></div>
             <div class="footer__row">
               <ul class="socials desktop-hidden">
@@ -569,7 +593,7 @@
               <div class="footer__contacts footer__contacts--tel">
                 <img src="images/footer/phone.svg" class="footer__icon" />
                 <div class="footer__text">
-                  <a href="tel:+7 (812) 409 42 20" class="footer__link">+7 (812) 409 42 20</a>
+                  <a href="tel:+7 (812) 679 84 74" class="footer__link">+7 (812) 679 84 74</a>
                 </div>
               </div>
               <div class="footer__contacts footer__contacts--tel">
@@ -669,26 +693,26 @@
   <a href="#" class="logo logo--fixed mobile-hidden" id="logo-fixed">
     <img src="images/content/logo.svg" alt="">
   </a>
-  <div class="popup popup--contact" id="popup-form">
+  <form class="popup popup--contact" id="popup-form">
     <div class="popup__content">
       <div class="popup__panel">
         <a href="#" class="popup__trigger">
-          <img src="images/content/close.svg" alt="">
+          <img class="popup__trigger-img" src="images/content/close.svg" alt="">
         </a>
         <div class="popup__inputs">
           <div class="popup__input-row">
             <label for="" class="popup__input input">
               <div class="input__text">ФИО</div>
               <div class="input__wrap">
-                <input placeholder="Овчинников" type="text" class="input__input">
-                <img src="images/content/error.svg" alt="" class="input__error">
+                <input type="text" class="input__input required">
+                <img src="images/content/error.svg" alt="" class="input__error fade hidden">
               </div>
             </label>
             <label for="" class="popup__input input">
               <div class="input__text">Компания</div>
               <div class="input__wrap">
-                <input placeholder="ОАО" type="text" class="input__input">
-                <img src="images/content/error.svg" alt="" class="input__error">
+                <input type="text" class="input__input required">
+                <img src="images/content/error.svg" alt="" class="input__error fade hidden">
               </div>
             </label>
           </div>
@@ -696,15 +720,15 @@
             <label for="" class="popup__input input">
               <div class="input__text">Телефон для связи</div>
               <div class="input__wrap">
-                <input type="text" class="input__input">
-                <img src="images/content/error.svg" alt="" class="input__error">
+                <input type="text" class="input__input required">
+                <img src="images/content/error.svg" alt="" class="input__error fade hidden">
               </div>
             </label>
             <label for="" class="popup__input input">
               <div class="input__text">E-mail</div>
               <div class="input__wrap">
-                <input placeholder="contacts@company.com" type="text" class="input__input">
-                <img src="images/content/error.svg" alt="" class="input__error">
+                <input type="text" class="input__input required">
+                <img src="images/content/error.svg" alt="" class="input__error fade hidden">
               </div>
             </label>
           </div>
@@ -721,12 +745,12 @@
         <button type="submit" class="popup__btn btn btn--submit">Отправить</button>
       </div>
     </div>
-  </div>
+  </form>
   <div class="popup popup--contact">
     <div class="popup__content">
       <div class="popup__panel">
         <a href="#" class="popup__trigger">
-          <img src="images/content/close.svg" alt="">
+          <img class="popup__trigger-img" src="images/content/close.svg" alt="">
         </a>
         <div class="popup__text">Ошибка!</div>
         <div class="popup__text">Ваше сообщение не было отправлено, попробуйте повторить позже или напишие нам на почту
@@ -739,7 +763,7 @@
     <div class="popup__content">
       <div class="popup__panel">
         <a href="#" class="popup__trigger">
-          <img src="images/content/close.svg" alt="">
+          <img class="popup__trigger-img" src="images/content/close.svg" alt="">
         </a>
         <div class="popup__text">Благодарим!</div>
         <div class="popup__text">Ваше сообщение отправлено и совсем скоро будет обработано нами!
@@ -755,6 +779,66 @@
         </div>
       </div>
     </div>
+  </div>
+  <div class="popup-bg"></div>
+  <div class="popup__rules">
+    <a href="#" class="popup__trigger" id="rules-close">
+      <img class="popup__trigger-img" src="images/content/close.svg" alt="">
+    </a>
+    <div class="popup__rules-header">Политика конфиденциальности</div>
+    <p class="popup__rules-text">
+      Политика конфиденциальности для мобильных приложений, разработанных студией webiraylab.com<br>
+
+      Версия от 14.01.2019 г.<br>
+
+      1. Общая информация<br>
+
+      1.1 Настоящая Политика конфиденциальности (далее - Политика) разработана для мобильных приложений, разработанных
+      студией webiraylab.com (далее - Приложения). В настоящей Политике описано, какие данные Приложений обрабатываются
+      разработчиком в лице Гогия Тимура Гурамовича (далее - Компания), и как Компания собирает и обрабатывает данные их
+      пользователей.<br>
+      1.2 Компания оставляет за собой право вносить изменения в Приложения и, при необходимости, адаптировать настоящую
+      Политику к внесенным изменениям.<br>
+
+      2. Цели обработки данных пользователей компанией<br>
+
+      2.1 Компания собирает данные технического характера об использовании Приложений и о возникающих ошибках с целью
+      создания статистики пользования Приложениями для последующего их улучшения и устранения ошибок.<br>
+      2.2 Компания может собирать персональные данные пользователя Приложений (e-mail пользователя) с целью
+      автоматической разовой отправки электронного расчета (услуги) на электронный адрес пользователя по требованию
+      самого пользователя.<br>
+
+      3. Данные пользователей, которые собирает и обрабатывает компания<br>
+
+      3.1. Личные данные: e-mail пользователя (разовая отправка услуги по требованию пользователя). Компания не собирает
+      и не обрабатывает другие личные данные пользователей Приложений, которые вносятся в Приложения самими
+      пользователями.<br>
+      3.2. Технические данные, которые собирает Компания: данные о количестве запусков Приложений в целом и их отдельных
+      экранов и функций, числе активных пользователей, стране и регионе использования Приложений.<br>
+      3.3. Данные об ошибках, которые собирает Компания: технические параметры устройства, данные о локализации ошибки,
+      частоте ошибок и сбоев. <br>
+      3.4. Все пользователи имеют возможность отключить предоставление Компании технических данных и данных об ошибках
+      через меню настроек Приложений.<br>
+
+      4. Передача данных пользователей, которые собирает и обрабатывает компания, третьим лицам<br>
+
+      Для осуществления сбора, обработки и хранения данных технического характера об использовании Приложений и о
+      возникающих ошибках, компания может использовать сервисы третьих лиц (Google Analytics).<br>
+
+      5. Безопасность данных пользователей<br>
+
+      Обработка данных пользователей происходит в Приложениях на их собственных устройствах без участия компании.<br>
+      Безопасность данных обеспечивается стандартными средствами операционной системы, в самих Приложениях
+      дополнительные средства защиты отсутствуют.<br>
+      Пользователи используют Приложения как есть и самостоятельно обеспечивают защиту своих данных в нем от угроз
+      безопасности, в т.ч., но не ограничиваясь:<br>
+      — защищают свое устройство и установленные в нем Приложения от кражи или утери;<br>
+      — защищают свое устройство и установленные в нем Приложения от несанкционированного доступа.<br>
+
+      6. Контакты<br>
+
+      По вопросам работы Приложений можно обращаться по электронной почте по адресу<br>
+    </p>
   </div>
   <script src="scripts/main.js"></script>
 </body>

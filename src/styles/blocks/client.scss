@@ -7,16 +7,38 @@
   &__text-subtitle {
     margin-bottom: 55px;
     margin-left: 90px;
+
+    @include laptops-small {
+      margin-left: 50px;
+    }
   }
-  
+
   &__container {
     padding: 120px;
+
     @include laptops-large {
       padding: 120px 0;
     }
+
     @include laptops-small {
       padding: 50px 0;
+      width: 100%;
     }
+
+    @include phones {
+      padding-bottom: 0;
+    }
+  }
+
+  &__wrapper {
+    @include laptops-small {
+      display: flex;
+      align-items: center;
+      width: 100%;
+      overflow: hidden;
+      overflow-x: auto;
+    }
+
   }
 
 

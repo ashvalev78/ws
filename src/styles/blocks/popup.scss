@@ -1,6 +1,6 @@
 .popup {
   position: fixed;
-  
+
   top: 0;
   left: 0;
   right: 0;
@@ -28,17 +28,15 @@
       height: 100%;
       width: 100%;
       display: flex;
+      flex-flow: column;
       justify-content: center;
       align-items: center;
-      background-color: $bg-color;
+      background-color: $bg-block;
+      max-width: unset;
     }
 
     @include phones {
-      padding: 60px 80px;
-    }
-
-    @include phones-small {
-      padding: 50px;
+      padding: 0;
     }
   }
 
@@ -46,6 +44,7 @@
     opacity: 1;
     visibility: visible;
     z-index: 1000;
+
     .popup__content {
       opacity: 1;
       visibility: visible;
@@ -60,16 +59,26 @@
 
     font-family: 'PlumbCondensed';
     font-size: 26px;
-  
+
     display: flex;
     flex-direction: column;
     position: relative;
+
+    @include laptops-small {
+      padding-top: 65px;
+    }
+
+    @include phones {
+      font-size: 14px;
+      padding-top: 30px;
+      width: 80%;
+    }
 
     &:not(:last-of-type) {
       margin-bottom: 25px;
     }
 
-     &--next {
+    &--next {
       padding: 22px;
     }
   }
@@ -78,8 +87,15 @@
     position: absolute;
     right: 15px;
     top: 15px;
+
+    &-img {
+      @include phones {
+        width: 15px;
+        height: 15px;
+      }
+    }
   }
-  
+
   &__inputs {
     margin-bottom: 22px;
   }
@@ -89,13 +105,29 @@
 
     &:not(:last-child) {
       margin-bottom: 30px;
+
+      @include phones {
+        margin-bottom: 5px;
+      }
     }
   }
 
   &__input {
     flex: 1;
+
     &:not(:last-child) {
       margin-right: 15px;
+
+      @include phones {
+        margin: 0;
+      }
+    }
+
+    &-row {
+      @include laptops-small {
+        display: flex;
+        flex-flow: column;
+      }
     }
   }
 

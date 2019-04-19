@@ -13,15 +13,20 @@ export const initBurgerMenu = (id: string): void => {
       dropdown.classList.toggle('hidden');
     });
   });
-  
+
+  const anchorsOffsets = Array.from(anchors).map(anchor => {
+    return anchor.offsetTop > document.body.scrollHeight || anchor.offsetTop === 0
+      ? document.body.scrollHeight
+      : anchor.offsetTop - 95;
+  });
+
   dropdownBtns.forEach((item, num) => {
     item.addEventListener('click', () => {
       console.log('num', ': ', num);
       window.scrollTo({
-        top: anchors[num].offsetTop - 95,
+        top: anchorsOffsets[num],
         behavior: 'smooth',
       });
     });
-  })
-
+  });
 };

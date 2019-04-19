@@ -31,14 +31,27 @@
 
   &__descr {
     margin-bottom: 60px;
+
     @include laptops-small {
       margin-bottom: 25px;
     }
   }
 
   &__img {
+    @include desktop-large {
+      width: 365px;
+    }
+
+    @include desktop {
+      width: 335px;
+    }
+
     @include laptops-middle {
       width: 315px;
+    }
+
+    @include laptops-small {
+      display: none;
     }
   }
 }

@@ -1,13 +1,32 @@
 .client-plus {
   display: flex;
 
+  @include laptops-small {
+    flex-flow: column;
+    width: 330px;
+  }
+
+  @include phones {
+    width: 230px;
+  }
+
   &__col {
     display: flex;
     align-items: flex-start;
 
+    @include laptops-small {
+      flex-flow: column;
+      align-items: flex-start;
+    }
+
     &--left {
       flex: .64;
       margin-right: 35px;
+
+      @include laptops-small {
+        flex-flow: row;
+        margin-left: -70px;
+      }
     }
 
     &--right {
@@ -17,6 +36,27 @@
 
   &__icon {
     margin-right: 40px;
+
+    @include laptops-small {
+      transform: rotate(90deg);
+      margin-top: 20px;
+      margin-bottom: 20px;
+    }
+
   }
-  
+
+  &__number {
+    @include laptops-small {
+      transform: rotate(0) !important;
+      margin: 0;
+      margin-right: 15px;
+    }
+
+    @include phones {
+      width: 44px;
+      height: 47px;
+      margin-right: 20px;
+    }
+  }
+
 }

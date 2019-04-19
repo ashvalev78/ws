@@ -11,6 +11,7 @@
   &__item {
     &:not(:last-child) {
       margin-bottom: 20px;
+
       @include laptops-small {
         margin-bottom: 0;
         margin-right: 20px;
@@ -35,13 +36,24 @@
     fill: $orange;
 
     transition: fill .25s;
+
     &:hover {
       // fill: #fff;
     }
-    
+
+    @include laptops-small {
+      fill: $bg-block;
+    }
+
     &--big {
       width: 36px;
       height: 36px;
     }
+  }
+}
+
+.header-social {
+  @include laptops-small {
+    fill: $orange;
   }
 }

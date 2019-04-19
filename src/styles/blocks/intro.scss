@@ -5,33 +5,99 @@
     padding: 175px 0 0;
   }
 
+  @include phones {
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    padding: 100px 0;
+    padding-bottom: 0;
+  }
+
   &__container {
     display: flex;
+
+    @include phones {
+      flex-flow: column;
+    }
   }
 
   &__focus-title {
     margin-bottom: 55px;
+
+    @include tablets {
+      width: 120%;
+      margin-left: -45%;
+    }
   }
 
   &__text {
     max-width: 600px;
     text-align: right;
     align-self: flex-end;
+
+    @include phones {
+      font-size: 16px;
+    }
   }
 
   &__descr {
     flex: .6;
+
+    @include phones {
+      position: relative;
+    }
   }
 
   &__terminal {
     flex: .4;
     padding-top: 80px;
+
+
+
+    @include tablets {
+      padding-top: 180px;
+      width: 290px;
+    }
+
+    @include phones {
+      padding-top: 20px;
+    }
+
+    &-img {
+      @include desktop-large {
+        width: 595px;
+      }
+
+      @include desktop {
+        width: 530px;
+      }
+
+      @include laptops-middle {
+        width: 435px;
+      }
+
+      @include laptops-small {
+        width: 320px;
+      }
+
+      @include tablets {
+        width: 290px;
+      }
+
+      @include phones {
+        width: 200px;
+      }
+    }
   }
 
   &__about {
     display: flex;
     flex-direction: column;
     margin-bottom: 200px;
+
+    @include phones {
+      margin-bottom: 20px;
+    }
   }
 
   &__next {
@@ -42,15 +108,43 @@
 
   &__btn {
     margin-bottom: 65px;
+
+    @include phones {
+      position: absolute;
+      top: -130px;
+      left: 40%;
+      width: 125px;
+      height: 30px;
+      font-size: 16px;
+      padding: 0;
+    }
   }
 
-  &__terminal-img {
-    @include laptops-middle {
-      width: 430px;
-    }
-    @include laptops-small {
-      width: 315px;
+  &__mobile {
+    width: 80%;
+    background-color: $focus-title-bg;
+    height: 65px;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    display: none;
+    line-height: normal;
+    letter-spacing: 0.02em;
+    font-weight: 600;
+    text-align: center;
+    font-family: 'PlumbCondensed';
+    padding: 6px 40px;
+    border-radius: 3px;
+
+    @include phones {
+      display: flex;
     }
   }
 
+  &__angle-next {
+    @include phones {
+      height: 45px;
+    }
+  }
 }
